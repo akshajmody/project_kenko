@@ -1,0 +1,178 @@
+
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+html {
+  height: 100%;
+}
+body {
+  height:100%;
+  width:100%;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  background: url("./background.png") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 1s infinite;
+  -moz-animation: bg-scrolling-reverse 1s infinite;
+  -o-animation: bg-scrolling-reverse 1s infinite;
+  animation: bg-scrolling-reverse 1s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+#homepage {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+}
+
+.EntryScreen {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes blinkingText{
+  0%{     background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(18, 231, 255), rgb(0, 255, 234), rgb(82, 219, 219));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   }
+  12%{    background: -webkit-linear-gradient(rgb(209, 251, 253), rgb(56, 234, 253), rgb(33, 255, 236), rgb(82, 219, 219));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  25%{    background: -webkit-linear-gradient(rgb(170, 251, 255), rgb(83, 238, 255), rgb(70, 255, 240), rgb(82, 219, 219));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  37%{    background: -webkit-linear-gradient(rgb(129, 251, 255), rgb(124, 242, 255), rgb(120, 255, 244), rgb(82, 219, 219));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  50%{    background: -webkit-linear-gradient(rgb(99, 245, 255), rgb(164, 246, 255), rgb(148, 255, 246), rgb(82, 219, 219));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  62%{    background: -webkit-linear-gradient(rgb(130, 244, 252), rgb(126, 242, 255), rgb(120, 255, 244), rgb(82, 219, 219));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  75%{    background: -webkit-linear-gradient(rgb(171, 249, 255), rgb(81, 238, 255), rgb(71, 255, 240), rgb(82, 219, 219));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  87%{    background: -webkit-linear-gradient(rgb(205, 250, 255), rgb(56, 235, 255), rgb(35, 255, 237), rgb(82, 219, 219));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  100%{   background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(17, 231, 255), rgb(0, 255, 234), rgb(82, 219, 219));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+}
+
+.EntryButton {
+  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(227, 252, 255), rgb(166, 255, 248), rgb(141, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 9rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.EntryButton:hover, .EntryButton:focus, .EntryButton:active {
+  font-size: 9.1rem;
+  animation: blinkingText 1s infinite;
+
+}
+
+.EntryButton2 {
+  font-size: 60px;
+  margin-top: -30px;
+}
+
+.EntryImage {
+  opacity: 0.92;
+  max-width: 500px;
+  height: auto;
+  -webkit-filter: drop-shadow(2px 2px 0 aqua)
+                  drop-shadow(-2px -2px 0 aqua);
+  filter: drop-shadow(2px 2px 0 aqua)
+          drop-shadow(-2px -2px 0 aqua);
+}
+
+.Selection {
+  background: -webkit-linear-gradient(rgb(136, 136, 136), rgb(71, 183, 218), rgb(167, 167, 167), rgb(138, 138, 138));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+}
+
+.cuisine {
+  -webkit-text-fill-color: grey;
+  color: grey;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.cuisine:hover, .cuisine:focus, .cuisine:active {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+  -webkit-text-fill-color: rgb(80, 89, 104);
+  color: rgb(80,89,104);
+
+}
+
+.Japanese,.Korean,.Mediterranean {
+  max-width: 80px;
+  border: 1px solid rgb(219, 219, 219);
+}
+
+.Korean {
+  margin-left: 190px;
+}
+.Japanese {
+  margin-left: 135px;
+}
+
+
+
