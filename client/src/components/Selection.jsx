@@ -5,19 +5,41 @@ class Selection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      renderMain: false,
+      selectedCuisine: "sub-optimal"
     };
+    this.handleClickJ=this.handleClickJ.bind(this);
+    this.handleClickK=this.handleClickK.bind(this);
+    this.handleClickM=this.handleClickM.bind(this);
   }
 
+  handleClickJ () {
+    this.setState({
+      renderMain: true,
+      selectedCuisine: "J"
+    });
+  }
+  handleClickK () {
+    this.setState({
+      renderMain: true,
+      selectedCuisine: "K"
+    });
+  }
+  handleClickM () {
+    this.setState({
+      renderMain: true,
+      selectedCuisine: "M"
+    });
+  }
 
   render () {
     return (
       <div className="Selection">select a cuisine
-        <div className="cuisine">>Japanese
+        <div id="J" className="cuisine testing" onClick={this.props.closeSelect}>>Japanese
           <img className="Japanese" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1920px-Flag_of_Japan.svg.png"></img></div>
-        <div className="cuisine">>Korean
+        <div id="K" className="cuisine">>Korean
           <img className="Korean" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1920px-Flag_of_South_Korea.svg.png"></img></div>
-        <div className="cuisine">>Mediterranean
+        <div id="M"className="cuisine">>Mediterranean
           <img className="Mediterranean" src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Mediterranean_flag.png"></img></div>
       </div>
       )

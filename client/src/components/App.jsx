@@ -1,6 +1,6 @@
 import React from 'react';
+import { component } from 'react';
 import axios from 'axios';
-import { Transition, animate } from 'react-spring';
 import Selection from './Selection.jsx';
 
 class App extends React.Component {
@@ -11,6 +11,7 @@ class App extends React.Component {
       renderSelection: false
     };
     this.handleClick = this.handleClick.bind(this);
+    this.closeSelection = this.closeSelection.bind(this);
   }
 
 
@@ -21,12 +22,21 @@ class App extends React.Component {
     });
   }
 
+  closeSelection() {
+    this.setState({
+      renderSelection: false
+    })
+    return (
+      <div>TEST DIV</div>
+    )
+  }
+
   renderSelection() {
     if (!this.state.renderSelection) {
       return null;
     }
     return (
-      <Selection></Selection>
+      <Selection closeSelect = {this.closeSelection}></Selection>
     );
   }
 
@@ -44,11 +54,13 @@ class App extends React.Component {
     )
   }
 
+
   render () {
     return (
       <div className="App">
         {this.renderTitle()}
         {this.renderSelection()}
+        {/* {this.renderMealgen()} */}
       </div>
       )
   }

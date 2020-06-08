@@ -1,0 +1,6 @@
+DROP DATABASE IF EXISTS kenko;
+
+CREATE DATABASE kenko;
+
+\c kenko
+
