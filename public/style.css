@@ -198,11 +198,48 @@ body {
   -webkit-text-fill-color: transparent;
   font-size: 3.8rem;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   display: inline-block;
+  text-align: center;
   transform: translate(-50%, -50%);
+}
 
+.Jline {
+  background: -webkit-linear-gradient(rgb(9, 157, 255), rgb(0, 119, 255), rgb(100, 100, 100), rgb(156, 156, 156));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.SelectionJP {
+  font-size: 2rem;
+}
+
+.generateButton {
+  font-size: 2.8rem;
+}
+
+.generateButton2{
+  font-size: 1.6rem;
+  margin-top: -5px;
+}
+
+.generateButton:hover, .generateButton:focus, .generateButton:active {
+  -webkit-text-fill-color: rgb(80, 89, 104);
+  color: rgb(80,89,104);
+  font-weight: bold;
+  cursor: cell;
+  animation: glowingText 1s infinite;
+}
+
+.selectedCuisine {
+  font-size: 2.3rem;
+  animation: glowingText;
+  animation-duration: 0.7s;
+  animation-iteration-count: 5;
 }
 
 .cuisine {
@@ -226,7 +263,6 @@ body {
   font-weight: bold;
   cursor: cell;
   animation: glowingText 0.67s infinite;
-
 }
 
 .Japanese,.Korean,.Mediterranean {
@@ -245,5 +281,64 @@ body {
   margin-top: 5px;
 }
 
+.foods {
+  font-size: 1.5rem;
+  text-align: left;
+  background: -webkit-linear-gradient(rgb(71, 181, 255), rgb(0, 119, 255), rgb(0, 57, 179), rgb(0, 22, 68));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blinkingText3;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+}
+
+
+.J1:hover:after {
+  content: ' -BENEFITS: multivitamin:HOLLISTIC HEALTH, fish oil:HEART HEALTH | SKIN | OMEGAS | ANTIDEPRESSION, collagen:BREAK-FAST | SKIN | JOINTS';
+}
+
+.K1:hover:after {
+  content: ' -BENEFITS: multivitamin:HOLLISTIC HEALTH, fish oil:HEART HEALTH | SKIN | OMEGAS | ANTIDEPRESSION, collagen:BREAK-FAST | SKIN | JOINTS';
+}
+
+.M1:hover:after {
+  content: ' -BENEFITS: multivitamin:HOLLISTIC HEALTH, collagen:BREAK-FAST | SKIN | JOINTS';
+}
+
+.J2:hover:after {
+  content: ' -BENEFITS: salmon filet:OMEGAS | PROTEIN | ASTAXATHIN ANTIOXIDANT'
+}
+
+.K2:hover:after {
+  content: ' -BENEFITS: grass fed beef sirloin:OMEGAS | NO ANTIBIOTICS | CLA | VITAMINS'
+}
+
+.M2:hover:after {
+  content: ' -BENEFITS: tilapia:PROTEIN | VITAMINS | MINERALS'
+}
+
+.J3:hover:after {
+  content: ' -BENEFITS: rice bran oil:POLYUNSAT | MONOUNSAT | VITAMIN E'
+}
+
+.K3:hover:after {
+  content: ' -BENEFITS: high oleic canola oil:OMEGAS | POLYUNSAT | MONOUNSAT'
+}
+
+.M3:hover:after {
+  content: ' -BENEFITS: extra virgin olive oil:POLYUNSAT | MONOUNSAT | ANTIOXIDANTS'
+}
+
+.J7:hover:after {
+  content: ' !LOW HEAT TO PRESERVE PROBIOTICS!'
+}
+
+.K7:hover:after {
+  content: ' !LOW HEAT TO PRESERVE PROBIOTICS!'
+}
+
+.M7:hover:after {
+  content: ' !LOW HEAT TO PRESERVE PROBIOTICS!'
+}
 
 

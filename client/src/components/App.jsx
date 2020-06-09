@@ -2,16 +2,21 @@ import React from 'react';
 import { component } from 'react';
 import axios from 'axios';
 import Selection from './Selection.jsx';
+import Mealgen from './Mealgen.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       renderTitle: true,
-      renderSelection: false
+      renderSelection: false,
+      selectedCuisine: "none",
+      renderMealgen: false,
     };
     this.handleClick = this.handleClick.bind(this);
-    this.closeSelection = this.closeSelection.bind(this);
+    this.closeSelectionJ = this.closeSelectionJ.bind(this);
+    this.closeSelectionK = this.closeSelectionK.bind(this);
+    this.closeSelectionM = this.closeSelectionM.bind(this);
   }
 
 
@@ -22,13 +27,28 @@ class App extends React.Component {
     });
   }
 
-  closeSelection() {
+  closeSelectionJ() {
     this.setState({
-      renderSelection: false
+      renderSelection: false,
+      selectedCuisine: "Japanese",
+      renderMealgen: true
     })
-    return (
-      <div>TEST DIV</div>
-    )
+  }
+
+  closeSelectionK() {
+    this.setState({
+      renderSelection: false,
+      selectedCuisine: "Korean",
+      renderMealgen: true
+    })
+  }
+
+  closeSelectionM() {
+    this.setState({
+      renderSelection: false,
+      selectedCuisine: "Mediterranean",
+      renderMealgen: true
+    })
   }
 
   renderSelection() {
@@ -36,8 +56,17 @@ class App extends React.Component {
       return null;
     }
     return (
-      <Selection closeSelect = {this.closeSelection}></Selection>
+      <Selection closeSelectionJ={this.closeSelectionJ} closeSelectionK={this.closeSelectionK} closeSelectionM={this.closeSelectionM}></Selection>
     );
+  }
+
+  renderMealgen() {
+    if (!this.state.renderMealgen) {
+      return null;
+    }
+    return (
+      <Mealgen selectedCuisine={this.state.selectedCuisine}></Mealgen>
+    )
   }
 
   renderTitle() {
@@ -60,7 +89,7 @@ class App extends React.Component {
       <div className="App">
         {this.renderTitle()}
         {this.renderSelection()}
-        {/* {this.renderMealgen()} */}
+        {this.renderMealgen()}
       </div>
       )
   }
