@@ -8,6 +8,7 @@ class Mealgen extends React.Component {
     this.state = {
       selectedCuisine: "none",
       renderMealPlan: false,
+      renderButton: true,
     };
     this.clickTest = this.clickTest.bind(this);
   }
@@ -15,7 +16,8 @@ class Mealgen extends React.Component {
 
   clickTest () {
     this.setState({
-      renderMealPlan: true
+      renderMealPlan: true,
+      renderButton: false
     });
   }
 
@@ -28,6 +30,19 @@ class Mealgen extends React.Component {
     )
   }
 
+  renderButton() {
+    if(!this.state.renderButton) {
+      return (
+        <div className="motivational">discpline yourself with scientifically superior foods</div>
+      )
+    } else {
+      return (
+        <div className="generateButton" onClick={this.clickTest}>-click to generate-</div>
+      )
+    }
+
+  }
+
 
   render () {
     return (
@@ -36,7 +51,7 @@ class Mealgen extends React.Component {
           <div className="Jline">食事最適化</div>
             <div className="generator">
               <div className="selectedCuisine">{this.props.selectedCuisine} selected</div>
-              <div className="generateButton" onClick={this.clickTest}>-click to generate-</div>
+              {this.renderButton()}
               {this.renderMealPlan()}
             </div>
         </div>
