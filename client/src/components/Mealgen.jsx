@@ -38,12 +38,13 @@ class Mealgen extends React.Component {
 
   renderButton() {
     if(!this.state.renderButton) {
-      return (
-        <div className="motivational">optimization complete</div>
-      )
+      return null
     } else {
       return (
-        <div className="generateButton" onClick={this.generateMeal}>-click to generate-</div>
+        <div>
+          <div className="selectedCuisine">{this.props.selectedCuisine} selected</div>
+          <div className="generateButton" onClick={this.generateMeal}>-click to generate-</div>
+        </div>
       )
     }
 
@@ -56,7 +57,6 @@ class Mealgen extends React.Component {
         <div className="Selection Test">MEAL OPTIMIZATION
           <div className="Jline">食事最適化</div>
             <div className="generator">
-              <div className="selectedCuisine">{this.props.selectedCuisine} selected</div>
               {this.renderButton()}
               {this.renderMealPlan()}
             </div>

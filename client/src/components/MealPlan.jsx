@@ -18,10 +18,12 @@ class MealPlan extends React.Component {
       renderMealPlan: false,
     };
     this.getFoods=this.getFoods.bind(this);
+    this.regenerate=this.regenerate.bind(this);
   }
 
   componentDidMount() {
-    this.getFoods(this.props.cuisine);
+    const input = this.props.cuisine;
+    setTimeout(() => {this.getFoods(this.props.cuisine)}, 2000);
   }
 
 
@@ -51,29 +53,63 @@ class MealPlan extends React.Component {
     }))
   }
 
+  regenerate() {
+    const input = this.props.cuisine;
+    this.setState({renderMealPlan: false})
+    //effect of "processing" - purely aesthetic
+    setTimeout(() => {this.getFoods(input)}, 2000);
+  }
 
 
   renderCuisine () {
     if (this.state.renderMealPlan === true) {
       return (
         <div className="foods">
-          <div>Carbohydrate: {this.state.carbo.carbo} </div>
-          <div>Fat: {this.state.fat.fat} </div>
-          <div>Protein: {this.state.protein.protein} </div>
-          <div>Vegetables: {this.state.vegetable[0].vegetable}, {this.state.vegetable[1].vegetable}, {this.state.vegetable[2].vegetable} </div>
+          <div className="regenerate" onClick={this.regenerate}>generate new optimization</div>
+          <div className="carbHover">
+            <div className="carbo1">Carbohydrate: {this.state.carbo.carbo} </div>
+            <div className="carbo2 info">Benefits: {this.state.carbo.utility} </div>
+          </div>
+          <div className="fatHover">
+            <div className="fat1">Fat: {this.state.fat.fat} </div>
+            <div className="fat2 info">Benefits: {this.state.fat.utility} </div>
+          </div>
+          <div className="proteinHover">
+            <div className="protein1">Protein: {this.state.protein.protein} </div>
+            <div className="protein2 info">Benefits: {this.state.protein.utility} </div>
+          </div>
+          <div className="vegHover">
+            <div className="veg1">Vegetables: {this.state.vegetable[0].vegetable}, {this.state.vegetable[1].vegetable}, {this.state.vegetable[2].vegetable} </div>
+            <div className="veg2 info">Benefits: {this.state.vegetable[0].utility},<br/>{this.state.vegetable[1].utility},<br/>{this.state.vegetable[2].utility} </div>
+          </div>
           <div>Seasonings: {this.state.seasoning[0].seasoning}, {this.state.seasoning[1].seasoning}, {this.state.seasoning[2].seasoning}, {this.state.seasoning[0].seasoning}</div>
-          <div>Probiotic: {this.state.probiotic.probiotic} </div>
-          <div>Fruits: {this.state.fruit[0].fruit}, {this.state.fruit[1].fruit}</div>
-          <div>Supplements:
-            <div className="supplements">Wakeup: {this.state.supplement[0].supplement} and {this.state.supplement[3].supplement} </div>
-            <div className="supplements">Breaking Fast: {this.state.supplement[2].supplement} and {this.state.supplement[1].supplement} </div>
-            <div className="supplements">Before Sleep: </div>
+          <div className="proHover">
+            <div className="pro1">Probiotic: {this.state.probiotic.probiotic} </div>
+            <a className="pro2 info" href="https://www.health.harvard.edu/vitamins-and-supplements/health-benefits-of-taking-probiotics" target="_blank">Harvard Medical: Benefits of probiotics</a>
+          </div>
+          <div className="fruitHover">
+            <div className="fruit1">Fruits: Meal 1:&nbsp;{this.state.fruit[0].fruit}, Meal 2:&nbsp;{this.state.fruit[1].fruit}</div>
+            <div className="fruit2 info">Benefits: {this.state.fruit[0].utility},<br/>{this.state.fruit[1].utility}</div>
+          </div>
+          <div className="supHover">
+            <div className="sup1">Supplements:
+              <div className="supplements">&nbsp;&nbsp;&nbsp;--Wakeup: {this.state.supplement[0].supplement} and {this.state.supplement[3].supplement} </div>
+              <div className="supplements">&nbsp;&nbsp;&nbsp;--Breaking Fast: {this.state.supplement[2].supplement} and {this.state.supplement[1].supplement} </div>
+              <div className="supplements">&nbsp;&nbsp;&nbsp;--Before Sleep: {this.state.supplement[4]?.supplement}</div>
+              <div className="supplements">&nbsp;&nbsp;&nbsp;--Digestion Concerns: {this.state.supplement[5]?.supplement}</div>
+              {/* MULTIPLE ERRORS HERE - FIXED BY ADDING NULL CHECK BUT NOT SURE WHY CANNOT RENDER ANYTHING BEYOND INDEX 4 FOR ANY ARRAY IN STATE - WITHOUT ? , THIS SUPPLEMENT LINE READS UNDEFINED */}
+            </div>
+            <a className="sup2 info" href="https://www.health.harvard.edu/staying-healthy/supplements-a-scorecard" target="_blank"> Harvard Medical Supplement Scorecard <br/> Multivitamins taken first thing with chilled water upon waking up. <br/> Collagen 30 minutes before first meal to help break intermittent fast smoothly.</a>
           </div>
         </div>
       )
     } else {
       return (
-        <div>NOT YET</div>
+        <div>
+          <div className="processing">processing...</div>
+          <div className="processing">処理中...</div>
+          <img className="processingImage" src="https://webstockreview.net/images/hexagon-clipart-transparent-background.gif" ></img>
+        </div>
       )
     }
   }

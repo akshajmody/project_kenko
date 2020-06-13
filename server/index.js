@@ -95,7 +95,7 @@ app.get('/meal/:cuisine/supplement', (req, res) => {
     if (err) {
       res.status(500).send(err);
     } else {
-      res.status(200).send([results.rows[0], results.rows[1], results.rows[2], results.rows[3], results.rows[4]]);
+      res.status(200).send(results.rows);
     }
   });
 });

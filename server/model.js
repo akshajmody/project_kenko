@@ -69,25 +69,14 @@ const getSeasoningsData = (cuisine, callback) => {
 };
 
 const getSupplementsData = (cuisine, callback) => {
+  const query = `SELECT * FROM supplements`;
 
-  if (cuisine === 'Japanese' || 'Korean') {
-    const query = `SELECT * FROM supplements WHERE supplement<>'Probiotic Supplement' `;
-
-    pool.query(query, (err, results) => {
-      if (err) {
-        callback(err);
-      }
-      callback(null, results);
-    });
-  } else {
-    const query = `SELECT * FROM supplements WHERE supplement<>'Fish Oil'`
-    pool.query(query, (err, results) => {
-      if (err) {
-        callback(err);
-      }
-      callback(null, results);
-    });
-  }
+  pool.query(query, (err, results) => {
+    if (err) {
+      callback(err);
+    }
+    callback(null, results);
+  });
 };
 
 

@@ -42,7 +42,7 @@
     background-position: 50px 50px;
   }
 }
-/* Main styles */
+
 html {
   height: 100%;
 }
@@ -302,7 +302,88 @@ body {
   font-size: 1.2rem;
 }
 
+.info {
+  font-weight: 800;
+  background: -webkit-linear-gradient(rgb(0, 98, 122), rgb(0, 179, 155), rgb(0, 102, 133), rgb(0, 94, 122));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+.carbHover:hover .carbo1,
+.carbHover .carbo2 {
+  display:none;
+}
 
+.carbHover:hover .carbo2 {
+  display: block;
+}
 
+.fatHover:hover .fat1,
+.fatHover .fat2 {
+  display:none;
+}
 
+.fatHover:hover .fat2 {
+  display: block;
+}
+
+.proteinHover:hover .protein1,
+.proteinHover .protein2 {
+  display:none;
+}
+
+.proteinHover:hover .protein2 {
+  display: block;
+}
+
+.vegHover:hover .veg1,
+.vegHover .veg2 {
+  display:none;
+}
+
+.vegHover:hover .veg2 {
+  display: block;
+}
+
+.fruitHover:hover .fruit1,
+.fruitHover .fruit2 {
+  display:none;
+}
+
+.fruitHover:hover .fruit2 {
+  display: block;
+}
+
+.supHover:hover .sup1,
+.supHover .sup2 {
+  display:none;
+}
+
+.supHover:hover .sup2 {
+  display: block;
+}
+
+.proHover:hover .pro1,
+.proHover .pro2 {
+  display:none;
+}
+
+.proHover:hover .pro2 {
+  display: block;
+}
+
+.regenerate {
+  text-align: center;
+  cursor: cell;
+  font-size: 1.8rem;
+}
+
+.regenerate:hover {
+  animation: glowingText 0.8s infinite;
+  font-weight: bold;
+}
+
+.processingImage {
+  width: 200px;
+  height: auto;
+}
