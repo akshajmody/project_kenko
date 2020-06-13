@@ -376,6 +376,9 @@ body {
   text-align: center;
   cursor: cell;
   font-size: 1.8rem;
+  background: -webkit-linear-gradient(rgb(0, 89, 255), rgb(0, 89, 255), rgb(0, 89, 255), rgb(0, 89, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .regenerate:hover {
