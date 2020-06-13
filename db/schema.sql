@@ -36,7 +36,8 @@ CREATE TABLE vegetables (
   id INT PRIMARY KEY,
   vegetable VARCHAR(255),
   utility VARCHAR(255)
-)
+);
+
 
 COPY vegetables(id, vegetable, utility) FROM '/Users/akshajmody/Documents/kenko_folder/project_kenko/db/csvData/vegetables.csv' WITH DELIMITER ',';
 
@@ -60,7 +61,7 @@ COPY proteins(id, protein, cuisine, utility) FROM '/Users/akshajmody/Documents/k
 CREATE TABLE seasonings (
   id INT PRIMARY KEY,
   seasoning VARCHAR(255),
-  cuisine VARCHAR(255),
+  cuisine VARCHAR(255)
 );
 
 COPY seasonings(id, seasoning, cuisine) FROM '/Users/akshajmody/Documents/kenko_folder/project_kenko/db/csvData/seasonings.csv' WITH DELIMITER ',';

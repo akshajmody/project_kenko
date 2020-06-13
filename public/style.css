@@ -238,17 +238,14 @@ body {
 }
 
 .motivational {
-  font-size: 2rem;
-  animation: glowingText;
-  animation-duration: 1s;
-  animation-iteration-count: 2;
+  font-size: 1.5rem;
 }
 
 .selectedCuisine {
   font-size: 2.3rem;
   animation: glowingText;
   animation-duration: 0.7s;
-  animation-iteration-count: 5;
+  animation-iteration-count: 3;
 }
 
 .cuisine {
@@ -293,7 +290,7 @@ body {
 .foods {
   font-size: 1.5rem;
   text-align: left;
-  background: -webkit-linear-gradient(rgb(71, 181, 255), rgb(0, 119, 255), rgb(0, 57, 179), rgb(0, 22, 68));
+  background: -webkit-linear-gradient(rgb(41, 125, 250), rgb(0, 119, 255), rgb(0, 57, 179), rgb(0, 22, 68));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: blinkingText2;
@@ -301,96 +298,11 @@ body {
   animation-iteration-count: 3;
 }
 
-
-.J1:hover:after {
-  content: ' -BENEFITS: multivitamin: HOLLISTIC HEALTH, fish oil: HEART HEALTH | SKIN | OMEGAS | ANTIDEPRESSION, collagen: BREAK-FAST | SKIN | JOINTS';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
+.supplements {
+  font-size: 1.2rem;
 }
 
-.K1:hover:after {
-  content: ' -BENEFITS: multivitamin: HOLLISTIC HEALTH, fish oil: HEART HEALTH | SKIN | OMEGAS | ANTIDEPRESSION, collagen: BREAK-FAST | SKIN | JOINTS';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
-}
 
-.M1:hover:after {
-  content: ' -BENEFITS: multivitamin: HOLLISTIC HEALTH, collagen: BREAK-FAST | SKIN | JOINTS';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
-}
 
-.J2:hover:after {
-  content: ' -BENEFITS: salmon filet: OMEGAS | PROTEIN | ASTAXATHIN ANTIOXIDANT';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.K2:hover:after {
-  content: ' -BENEFITS: grass fed beef sirloin: OMEGAS | NO ANTIBIOTICS | CLA | VITAMINS';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.M2:hover:after {
-  content: ' -BENEFITS: tilapia: PROTEIN | VITAMINS | MINERALS';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.J3:hover:after {
-  content: ' -BENEFITS: rice bran oil: POLYUNSAT | MONOUNSAT | VITAMIN E';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.K3:hover:after {
-  content: ' -BENEFITS: high oleic canola oil: OMEGAS | POLYUNSAT | MONOUNSAT';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.M3:hover:after {
-  content: ' -BENEFITS: extra virgin olive oil: POLYUNSAT | MONOUNSAT | ANTIOXIDANTS';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.J7:hover:after {
-  content: ' !LOW HEAT TO PRESERVE PROBIOTICS!';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.K7:hover:after {
-  content: ' !LOW HEAT TO PRESERVE PROBIOTICS!';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.M7:hover:after {
-  content: ' !LOW HEAT TO PRESERVE PROBIOTICS!';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.J8:hover:after {
-  content: ' -BENEFITS: wild blueberries: ANTHOCYANIN | ANTIOXIDANTS | VITAMINS, organic mandarins: ANTIOXIDANTS | VITAMINS | SYNEPHRINE | FIBER';
-  -webkit-text-fill-color: navy;
-  font-weight: bold;
-  text-decoration: underline;
-}
 
 

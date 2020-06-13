@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import * as Promise from 'bluebird';
 
 class MealPlan extends React.Component {
   constructor(props) {
@@ -11,73 +12,68 @@ class MealPlan extends React.Component {
       carbo: "none",
       fruit: "none",
       probiotic: "none",
-      protein: "none",
       seasoning: "none",
       supplement: "none",
-      supplementTwo: "none",
-      supplementThree: "none",
       vegetable: "none",
       renderMealPlan: false,
-      macroset: {}
     };
     this.getFoods=this.getFoods.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.getFoods(this.props.cuisine);
-  // }
+  componentDidMount() {
+    this.getFoods(this.props.cuisine);
+  }
+
 
   getFoods(cuisine) {
-    axios.get(`/kenko/${cuisine}`)
-    .then(this.setMacro)
-    .catch(this.handleError)
+    let carboReq = axios.get(`/meal/${cuisine}/carbo`);
+    let fatReq = axios.get(`/meal/${cuisine}/fat`);
+    let fruitReq = axios.get(`/meal/${cuisine}/fruit`);
+    let probioticReq = axios.get(`/meal/${cuisine}/probiotic`);
+    let proteinReq = axios.get(`/meal/${cuisine}/protein`);
+    let seasoningReq = axios.get(`/meal/${cuisine}/seasoning`);
+    let supplementReq = axios.get(`/meal/${cuisine}/supplement`);
+    let vegetableReq = axios.get(`/meal/${cuisine}/vegetable`);
+    axios.all([carboReq, fatReq, fruitReq, probioticReq, proteinReq, seasoningReq, supplementReq, vegetableReq]).then(axios.spread((carbData, fatData, fruitData, probioticData, proteinData, seasoningData, supplementData, vegetableData) => {
+      this.setState({
+        carbo: carbData.data[0],
+        fat: fatData.data[0],
+        probiotic: probioticData.data[0],
+        protein: proteinData.data[0],
+        fruit: fruitData.data,
+        seasoning: seasoningData.data,
+        vegetable: vegetableData.data,
+        supplement: supplementData.data
+      })
+    }))
+    .then(this.setState({
+      renderMealPlan: true
+    }))
   }
 
-  setMacro({data}) {
-    this.setState({macroset: data})
-  }
+
 
   renderCuisine () {
-    if (this.props.cuisine === "Japanese") {
+    if (this.state.renderMealPlan === true) {
       return (
         <div className="foods">
-          <div className="J1">Daily Supplements: multivitamin, fish oil, collagen</div>
-          <div className="J2">Protein: salmon filet </div>
-          <div className="J3">Fat: rice bran oil </div>
-          <div className="J4">Carbohydrate: Genmai Brown Rice </div>
-          <div className="J5">Vegetables: sprouting Broccoli, spinach, bean sprouts</div>
-          <div className="J6">Seasonings: soy sauce, yuzukosho, green onions, sesame sauce </div>
-          <div className="J7">Probiotic: Miso Soup</div>
-          <div className="J8">Fruits: wild blueberries, organic mandarins</div>
+          <div>Carbohydrate: {this.state.carbo.carbo} </div>
+          <div>Fat: {this.state.fat.fat} </div>
+          <div>Protein: {this.state.protein.protein} </div>
+          <div>Vegetables: {this.state.vegetable[0].vegetable}, {this.state.vegetable[1].vegetable}, {this.state.vegetable[2].vegetable} </div>
+          <div>Seasonings: {this.state.seasoning[0].seasoning}, {this.state.seasoning[1].seasoning}, {this.state.seasoning[2].seasoning}, {this.state.seasoning[0].seasoning}</div>
+          <div>Probiotic: {this.state.probiotic.probiotic} </div>
+          <div>Fruits: {this.state.fruit[0].fruit}, {this.state.fruit[1].fruit}</div>
+          <div>Supplements:
+            <div className="supplements">Wakeup: {this.state.supplement[0].supplement} and {this.state.supplement[3].supplement} </div>
+            <div className="supplements">Breaking Fast: {this.state.supplement[2].supplement} and {this.state.supplement[1].supplement} </div>
+            <div className="supplements">Before Sleep: </div>
+          </div>
         </div>
       )
-    }
-    if (this.props.cuisine === "Korean") {
+    } else {
       return (
-        <div className="foods">
-          <div className="K1">Daily Supplements: multivitamin, fish oil, collagen </div>
-          <div className="K2">Protein: grass fed beef sirloin</div>
-          <div className="K3">Fat: high oleic canola oil </div>
-          <div className="K4">Carbohydrate: purple rice </div>
-          <div className="K5">Vegetables: onions and peppers, eggplant, tomato </div>
-          <div className="K6">Seasonings: gochujang, garlic, ginger, soy sauce</div>
-          <div className="K7">Probiotic: radish kimchi </div>
-          <div className="K8">Fruits: kiwi, wild blueberries</div>
-        </div>
-      )
-    }
-    if (this.props.cuisine === "Mediterranean") {
-      return (
-        <div className="foods">
-          <div className="M1">Daily Supplements: multivitamin, collagen </div>
-          <div className="M2">Protein: tilapia</div>
-          <div className="M3">Fat: extra virgin olive oil</div>
-          <div className="M4">Carbohydrate: whole grain couscous</div>
-          <div className="M5"> Vegetables: spinach, sprouting broccoli, cauliflower </div>
-          <div className="M6">Seasonings: rosemary, garlic, fennel, lemon juice</div>
-          <div className="M7">Probiotic: greek yoghurt</div>
-          <div className="M8">Fruits: grapefruit, red grapes</div>
-        </div>
+        <div>NOT YET</div>
       )
     }
   }

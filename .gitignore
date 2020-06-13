@@ -3,3 +3,5 @@ node_modules/
 
 #bundle
 bundle.js
+bundle.js.br
+bundle.js.gz

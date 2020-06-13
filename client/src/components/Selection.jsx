@@ -7,29 +7,8 @@ class Selection extends React.Component {
     this.state = {
       selectedCuisine: "none"
     };
-    this.handleClickJ=this.handleClickJ.bind(this);
-    this.handleClickK=this.handleClickK.bind(this);
-    this.handleClickM=this.handleClickM.bind(this);
   }
 
-  handleClickJ () {
-    this.setState({
-      renderMain: true,
-      selectedCuisine: "J"
-    });
-  }
-  handleClickK () {
-    this.setState({
-      renderMain: true,
-      selectedCuisine: "K"
-    });
-  }
-  handleClickM () {
-    this.setState({
-      renderMain: true,
-      selectedCuisine: "M"
-    });
-  }
 
   render () {
     return (
