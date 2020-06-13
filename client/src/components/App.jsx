@@ -1,16 +1,22 @@
 import React from 'react';
+import { component } from 'react';
 import axios from 'axios';
-import { Transition, animate } from 'react-spring';
 import Selection from './Selection.jsx';
+import Mealgen from './Mealgen.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       renderTitle: true,
-      renderSelection: false
+      renderSelection: false,
+      selectedCuisine: "none",
+      renderMealgen: false,
     };
     this.handleClick = this.handleClick.bind(this);
+    this.closeSelectionJ = this.closeSelectionJ.bind(this);
+    this.closeSelectionK = this.closeSelectionK.bind(this);
+    this.closeSelectionM = this.closeSelectionM.bind(this);
   }
 
 
@@ -21,13 +27,46 @@ class App extends React.Component {
     });
   }
 
+  closeSelectionJ() {
+    this.setState({
+      renderSelection: false,
+      selectedCuisine: "Japanese",
+      renderMealgen: true
+    })
+  }
+
+  closeSelectionK() {
+    this.setState({
+      renderSelection: false,
+      selectedCuisine: "Korean",
+      renderMealgen: true
+    })
+  }
+
+  closeSelectionM() {
+    this.setState({
+      renderSelection: false,
+      selectedCuisine: "Mediterranean",
+      renderMealgen: true
+    })
+  }
+
   renderSelection() {
     if (!this.state.renderSelection) {
       return null;
     }
     return (
-      <Selection></Selection>
+      <Selection closeSelectionJ={this.closeSelectionJ} closeSelectionK={this.closeSelectionK} closeSelectionM={this.closeSelectionM}></Selection>
     );
+  }
+
+  renderMealgen() {
+    if (!this.state.renderMealgen) {
+      return null;
+    }
+    return (
+      <Mealgen selectedCuisine={this.state.selectedCuisine}></Mealgen>
+    )
   }
 
   renderTitle() {
@@ -44,11 +83,13 @@ class App extends React.Component {
     )
   }
 
+
   render () {
     return (
       <div className="App">
         {this.renderTitle()}
         {this.renderSelection()}
+        {this.renderMealgen()}
       </div>
       )
   }

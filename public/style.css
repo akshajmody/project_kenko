@@ -42,7 +42,7 @@
     background-position: 50px 50px;
   }
 }
-/* Main styles */
+
 html {
   height: 100%;
 }
@@ -59,6 +59,7 @@ body {
   -moz-animation-timing-function: linear;
   -o-animation-timing-function: linear;
   animation-timing-function: linear;
+  cursor: crosshair;
 }
 
 #homepage {
@@ -78,30 +79,92 @@ body {
 }
 
 @keyframes blinkingText{
-  0%{     background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(18, 231, 255), rgb(0, 255, 234), rgb(82, 219, 219));   -webkit-background-clip: text;
+  0%{    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(18, 231, 255),rgb(0, 229, 255),rgb(20, 255, 255));   -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;   }
-  12%{    background: -webkit-linear-gradient(rgb(209, 251, 253), rgb(56, 234, 253), rgb(33, 255, 236), rgb(82, 219, 219));   -webkit-background-clip: text;
+  10%{   background: -webkit-linear-gradient(rgb(230, 253, 253), rgb(50, 235, 255),rgb(30, 233, 255),rgb(80, 255, 255));   -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
-  25%{    background: -webkit-linear-gradient(rgb(170, 251, 255), rgb(83, 238, 255), rgb(70, 255, 240), rgb(82, 219, 219));   -webkit-background-clip: text;
+  20%{   background: -webkit-linear-gradient(rgb(200, 255, 255), rgb(80, 237, 255),rgb(60, 235, 255),rgb(140, 255, 255));   -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
-  37%{    background: -webkit-linear-gradient(rgb(129, 251, 255), rgb(124, 242, 255), rgb(120, 255, 244), rgb(82, 219, 219));   -webkit-background-clip: text;
+  30%{   background: -webkit-linear-gradient(rgb(160, 255, 255), rgb(125, 242, 255),rgb(90, 239, 255),rgb(180, 255, 255));   -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
-  50%{    background: -webkit-linear-gradient(rgb(99, 245, 255), rgb(164, 246, 255), rgb(148, 255, 246), rgb(82, 219, 219));   -webkit-background-clip: text;
+  40%{   background: -webkit-linear-gradient(rgb(120, 255, 255), rgb(178, 240, 247),rgb(122, 242, 255),rgb(220, 255, 255));   -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
-  62%{    background: -webkit-linear-gradient(rgb(130, 244, 252), rgb(126, 242, 255), rgb(120, 255, 244), rgb(82, 219, 219));   -webkit-background-clip: text;
+  45%{   background: -webkit-linear-gradient(rgb(90, 255, 255), rgb(220, 255, 255),rgb(140, 242, 255),rgb(235, 255, 255));   -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
-  75%{    background: -webkit-linear-gradient(rgb(171, 249, 255), rgb(81, 238, 255), rgb(71, 255, 240), rgb(82, 219, 219));   -webkit-background-clip: text;
+  50%{   background: -webkit-linear-gradient(rgb(60, 255, 255), rgb(255, 255, 255),rgb(152, 245, 255),rgb(255, 255, 255));   -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
-  87%{    background: -webkit-linear-gradient(rgb(205, 250, 255), rgb(56, 235, 255), rgb(35, 255, 237), rgb(82, 219, 219));   -webkit-background-clip: text;
+  55%{   background: -webkit-linear-gradient(rgb(90, 255, 255), rgb(220, 255, 255),rgb(140, 245, 255),rgb(235, 255, 255));   -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
-  100%{   background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(17, 231, 255), rgb(0, 255, 234), rgb(82, 219, 219));   -webkit-background-clip: text;
+  60%{   background: -webkit-linear-gradient(rgb(120, 255, 255), rgb(179, 247, 255),rgb(123, 242, 255),rgb(220, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  70%{   background: -webkit-linear-gradient(rgb(160, 255, 255), rgb(117, 241, 255),rgb(90, 234, 250),rgb(180, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  80%{   background: -webkit-linear-gradient(rgb(200, 255, 255), rgb(79, 237, 255),rgb(60, 235, 255),rgb(140, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  90%{   background: -webkit-linear-gradient(rgb(230, 255, 255), rgb(51, 235, 255),rgb(30, 233, 255),rgb(80, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  100%{   background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(18, 231, 255),rgb(0, 229, 255),rgb(20, 255, 255));   -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
 }
 
+@keyframes blinkingText2{
+  0%{    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   }
+  10%{   background: -webkit-linear-gradient(rgb(222, 255, 255), rgb(222, 255, 255),rgb(222, 255, 255),rgb(222, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  20%{   background: -webkit-linear-gradient(rgb(189, 255, 255), rgb(189, 255, 255),rgb(189, 255, 255),rgb(189, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  30%{   background: -webkit-linear-gradient(rgb(156, 255, 255), rgb(156, 255, 255),rgb(156, 255, 255),rgb(156, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  40%{   background: -webkit-linear-gradient(rgb(123, 255, 255), rgb(123, 255, 255),rgb(123, 255, 255),rgb(123, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  45%{   background: -webkit-linear-gradient(rgb(110, 255, 255), rgb(110, 255, 255),rgb(110, 255, 255),rgb(110, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  50%{   background: -webkit-linear-gradient(rgb(78, 255, 255), rgb(78, 255, 255),rgb(78, 255, 255),rgb(78, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  55%{   background: -webkit-linear-gradient(rgb(110, 255, 255), rgb(110, 255, 255),rgb(110, 245, 255),rgb(110, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  60%{   background: -webkit-linear-gradient(rgb(123, 255, 255), rgb(123, 255, 255),rgb(123, 255, 255),rgb(123, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  70%{   background: -webkit-linear-gradient(rgb(156, 255, 255), rgb(156, 255, 255),rgb(156, 255, 255),rgb(156, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  80%{   background: -webkit-linear-gradient(rgb(189, 255, 255), rgb(189, 255, 255),rgb(189, 255, 255),rgb(189, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  90%{   background: -webkit-linear-gradient(rgb(222, 255, 255), rgb(222, 255, 255),rgb(222, 255, 255),rgb(222, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+  100%{   background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255));   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+}
+
+@keyframes glowingText{
+  0%{   -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(41, 41, 41);   }
+  10%{   -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(83, 83, 83);   }
+  20%{   -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(100, 100, 100);   }
+  30%{   -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(145, 145, 145);   }
+  40%{   -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(187, 187, 187);   }
+  50%{   -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(224, 223, 223);   }
+  60%{   -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(184, 184, 184);   }
+  70%{   -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(145, 145, 145);   }
+  80%{   -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(102, 102, 102);   }
+  90%{   -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(82, 82, 82);   }
+  100%{   -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(41, 41, 41);   }
+}
+
+
+
 .EntryButton {
-  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(227, 252, 255), rgb(166, 255, 248), rgb(141, 255, 255));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  animation: blinkingText 1.5s infinite;
   font-size: 9rem;
   position: absolute;
   top: 50%;
@@ -110,13 +173,13 @@ body {
 }
 
 .EntryButton:hover, .EntryButton:focus, .EntryButton:active {
-  font-size: 9.1rem;
-  animation: blinkingText 1s infinite;
-
+  animation: blinkingText2 1.2s infinite;
+  font-size: 9.05rem;
+  cursor: cell;
 }
 
 .EntryButton2 {
-  font-size: 60px;
+  font-size: 63px;
   margin-top: -30px;
 }
 
@@ -124,22 +187,65 @@ body {
   opacity: 0.92;
   max-width: 500px;
   height: auto;
-  -webkit-filter: drop-shadow(2px 2px 0 aqua)
-                  drop-shadow(-2px -2px 0 aqua);
-  filter: drop-shadow(2px 2px 0 aqua)
-          drop-shadow(-2px -2px 0 aqua);
+  -webkit-filter: drop-shadow(2px 2px 0 rgba(0, 255, 255, 0.7))
+                      drop-shadow(-2px -2px 0 rgba(0, 255, 255, 0.7));
+      filter: drop-shadow(2px 2px 0 rgb(0, 255, 255, 0.7))
+              drop-shadow(-2px -2px 0 rgb(0, 255, 255, 0.7));
+  cursor: cell;
 }
 
 .Selection {
-  background: -webkit-linear-gradient(rgb(136, 136, 136), rgb(71, 183, 218), rgb(167, 167, 167), rgb(138, 138, 138));
+  background: -webkit-linear-gradient(rgb(9, 157, 255), rgb(0, 119, 255), rgb(100, 100, 100), rgb(156, 156, 156));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   display: inline-block;
+  text-align: center;
   transform: translate(-50%, -50%);
+}
+
+.Jline {
+  background: -webkit-linear-gradient(rgb(9, 157, 255), rgb(0, 119, 255), rgb(100, 100, 100), rgb(156, 156, 156));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.SelectionJP {
+  font-size: 2rem;
+}
+
+.generateButton {
+  font-size: 2.8rem;
+}
+
+.generateButton2{
+  font-size: 1.6rem;
+  margin-top: -5px;
+}
+
+.generateButton:hover, .generateButton:focus, .generateButton:active {
+  -webkit-text-fill-color: rgb(80, 89, 104);
+  color: rgb(80,89,104);
+  font-weight: bold;
+  cursor: cell;
+  animation: glowingText 1s infinite;
+}
+
+.motivational {
+  font-size: 1.5rem;
+}
+
+.selectedCuisine {
+  font-size: 2.3rem;
+  animation: glowingText;
+  animation-duration: 0.7s;
+  animation-iteration-count: 3;
 }
 
 .cuisine {
@@ -152,6 +258,7 @@ body {
   transition-duration: 0.3s;
   -webkit-transition-property: transform;
   transition-property: transform;
+  font-size: 3.5rem;
 }
 
 .cuisine:hover, .cuisine:focus, .cuisine:active {
@@ -159,7 +266,9 @@ body {
   transform: translateX(20px);
   -webkit-text-fill-color: rgb(80, 89, 104);
   color: rgb(80,89,104);
-
+  font-weight: bold;
+  cursor: cell;
+  animation: glowingText 0.67s infinite;
 }
 
 .Japanese,.Korean,.Mediterranean {
@@ -174,5 +283,110 @@ body {
   margin-left: 135px;
 }
 
+.testing {
+  margin-top: 5px;
+}
 
+.foods {
+  font-size: 1.5rem;
+  text-align: left;
+  background: -webkit-linear-gradient(rgb(41, 125, 250), rgb(0, 119, 255), rgb(0, 57, 179), rgb(0, 22, 68));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blinkingText2;
+  animation-duration: 0.6s;
+  animation-iteration-count: 3;
+}
 
+.supplements {
+  font-size: 1.2rem;
+}
+
+.info {
+  font-weight: 800;
+  background: -webkit-linear-gradient(rgb(0, 98, 122), rgb(0, 179, 155), rgb(0, 102, 133), rgb(0, 94, 122));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.carbHover:hover .carbo1,
+.carbHover .carbo2 {
+  display:none;
+}
+
+.carbHover:hover .carbo2 {
+  display: block;
+}
+
+.fatHover:hover .fat1,
+.fatHover .fat2 {
+  display:none;
+}
+
+.fatHover:hover .fat2 {
+  display: block;
+}
+
+.proteinHover:hover .protein1,
+.proteinHover .protein2 {
+  display:none;
+}
+
+.proteinHover:hover .protein2 {
+  display: block;
+}
+
+.vegHover:hover .veg1,
+.vegHover .veg2 {
+  display:none;
+}
+
+.vegHover:hover .veg2 {
+  display: block;
+}
+
+.fruitHover:hover .fruit1,
+.fruitHover .fruit2 {
+  display:none;
+}
+
+.fruitHover:hover .fruit2 {
+  display: block;
+}
+
+.supHover:hover .sup1,
+.supHover .sup2 {
+  display:none;
+}
+
+.supHover:hover .sup2 {
+  display: block;
+}
+
+.proHover:hover .pro1,
+.proHover .pro2 {
+  display:none;
+}
+
+.proHover:hover .pro2 {
+  display: block;
+}
+
+.regenerate {
+  text-align: center;
+  cursor: cell;
+  font-size: 1.8rem;
+  background: -webkit-linear-gradient(rgb(0, 89, 255), rgb(0, 89, 255), rgb(0, 89, 255), rgb(0, 89, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.regenerate:hover {
+  animation: glowingText 0.8s infinite;
+  font-weight: bold;
+}
+
+.processingImage {
+  width: 200px;
+  height: auto;
+}
