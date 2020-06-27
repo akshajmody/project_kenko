@@ -1,7 +1,12 @@
 # kenkō / 健康
+
 ## kenkō: Japanese word for 'health'
 
+<img src="https://akshajmodyportfolio.s3-us-west-1.amazonaws.com/KenkoDemo1.png" width=800>
+
 >kenkō is a full-stack health app designed for users to generate and customize unique diet and meal optimizations specifically for longevity and holistic health via science-driven nutrition. The purpose of this app is to both educate and inspire users to unlock their full dietary and living potential.
+
+
 
 ## Current Features
 - Cuisine selection currently featuring Japanese, Korean, and Mediterranean options
@@ -33,8 +38,6 @@ npm run start:prod
 npm run build:prod
 ```
 >On your preferred browser, navigate to http://localhost:3005/
-
-<img src="https://akshajmodyportfolio.s3-us-west-1.amazonaws.com/KenkoDemo1.png" width=800>
 
 ## Cuisine Selection Page
 <img src="https://akshajmodyportfolio.s3-us-west-1.amazonaws.com/KenkoDemo2.png" width=800>
