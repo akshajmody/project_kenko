@@ -23,7 +23,7 @@ class MealPlan extends React.Component {
 
   componentDidMount() {
     const input = this.props.cuisine;
-    setTimeout(() => {this.getFoods(this.props.cuisine)}, 1500);
+    setTimeout(() => {this.getFoods(this.props.cuisine)}, 1600);
   }
 
 
@@ -57,7 +57,7 @@ class MealPlan extends React.Component {
     const input = this.props.cuisine;
     this.setState({renderMealPlan: false})
     //effect of "processing" - purely aesthetic
-    setTimeout(() => {this.getFoods(input)}, 1500);
+    setTimeout(() => {this.getFoods(input)}, 1600);
   }
 
 
@@ -84,7 +84,7 @@ class MealPlan extends React.Component {
             <div className="veg1">Vegetables: {this.state.vegetable[0].vegetable}, {this.state.vegetable[1].vegetable}, {this.state.vegetable[2].vegetable} </div>
             <div className="veg2 info">⬡Benefits: {this.state.vegetable[0].utility},<br/>{this.state.vegetable[1].utility},<br/>{this.state.vegetable[2].utility} </div>
           </div>
-          <div>Seasonings: {this.state.seasoning[0].seasoning}, {this.state.seasoning[1].seasoning}, {this.state.seasoning[2].seasoning}, {this.state.seasoning[0].seasoning}</div>
+          <div>Seasonings: {this.state.seasoning[0].seasoning}, {this.state.seasoning[1].seasoning}, {this.state.seasoning[2].seasoning}, {this.state.seasoning[3].seasoning}</div>
           <div className="proHover">
             <div className="pro1">Probiotic: {this.state.probiotic.probiotic} </div>
             <a className="pro2 info" href="https://www.health.harvard.edu/vitamins-and-supplements/health-benefits-of-taking-probiotics" target="_blank">⬡Harvard Medical: Benefits of probiotics</a>
@@ -108,8 +108,8 @@ class MealPlan extends React.Component {
     } else {
       return (
         <div>
-          <div className="processing">processing...</div>
-          <div className="processing">処理中...</div>
+          <div className="processing">...processing...</div>
+          <div className="processing">...処理中...</div>
           <img className="processingImage" src="https://webstockreview.net/images/hexagon-clipart-transparent-background.gif" ></img>
         </div>
       )

@@ -51,10 +51,10 @@ body {
   width:100%;
   font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
   background: url("./background.png") repeat 0 0;
-  -webkit-animation: bg-scrolling-reverse 1s infinite;
-  -moz-animation: bg-scrolling-reverse 1s infinite;
-  -o-animation: bg-scrolling-reverse 1s infinite;
-  animation: bg-scrolling-reverse 1s infinite;
+  -webkit-animation: bg-scrolling-reverse 1.5s infinite;
+  -moz-animation: bg-scrolling-reverse 1.5s infinite;
+  -o-animation: bg-scrolling-reverse 1.5s infinite;
+  animation: bg-scrolling-reverse 1.5s infinite;
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
   -o-animation-timing-function: linear;
@@ -164,7 +164,7 @@ body {
 
 
 .EntryButton {
-  animation: blinkingText 1.5s infinite;
+  animation: blinkingText 1.2s infinite;
   font-size: 9rem;
   position: absolute;
   top: 50%;
@@ -307,6 +307,7 @@ body {
   background: -webkit-linear-gradient(rgb(0, 98, 122), rgb(0, 179, 155), rgb(0, 102, 133), rgb(0, 94, 122));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
 }
 
 .carbHover:hover .carbo1,
