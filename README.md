@@ -44,11 +44,11 @@ npm run build:prod
 
 ## Generated Unique Meal Page Example
 <img src="https://akshajmodyportfolio.s3-us-west-1.amazonaws.com/KenkoDemo4.png
-">
+" width=800>
 
 ## Generated Unique Meal Page Example 2
 <img src="https://akshajmodyportfolio.s3-us-west-1.amazonaws.com/KenkoDemo3.png
-">
+" width=800>
 
 ## Goals
 > Longevity and nutrition have been fascinations of mine for as long as I can remember. As such, the goal of this app is to instill that passion in others. I hope to educate users with this app, shifting the focus onto real foods that encourage humans to reach and surpass their maximum physical and mental potentials.
