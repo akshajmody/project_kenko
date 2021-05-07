@@ -39,7 +39,7 @@
     "react-router-dom": "^5.2.0",
     "react-spring": "^8.0.27",
     "styled-components": "^5.1.1",
-    "underscore": "^1.10.2"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
